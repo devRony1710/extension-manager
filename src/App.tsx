@@ -1,12 +1,12 @@
-import "./App.css";
-import { Button, Input } from "@/components";
+import { MainLayout } from "@/layouts";
 
 function App() {
   return (
-    <>
-      <Button />
-      <Input />
-    </>
+    <MainLayout>
+      <div>
+        <h1>Welcome to React + TypeScript + Vite</h1>
+      </div>
+    </MainLayout>
   );
 }
 

@@ -1,0 +1,5 @@
+.main-wrapper {
+  width: 100dvw;
+  height: 100dvh;
+  background: var(--dark-gradient);
+}
