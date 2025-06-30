@@ -1,0 +1,23 @@
+.button-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-neutral-700);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.button-icon-container:hover {
+  animation: animationButtonHover 0.2s both;
+}
+
+@keyframes animationButtonHover {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
