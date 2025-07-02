@@ -27,8 +27,8 @@ export const ExtensionCardList: FC<ExtensionCardListProps> = ({
             </div>
           </div>
 
-          <div>
-            <button>Install</button>
+          <div className={styles["extensionCardBottomActionsContainer"]}>
+            <button className={styles["extensionDeleteButton"]}>Remove</button>
             <ToggleButton
               isActive={extension.isActive}
               handleOnToggle={() => handleOnToggle(extension.name)}
