@@ -1,0 +1,25 @@
+.homeMainContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.homeTitle {
+  color: var(--color-neutral-0);
+  font-family: var(--font-noto);
+  font-size: 42px;
+}
+
+@media (max-width: 768px) {
+  .homeMainContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homeTitle {
+    font-size: 36px;
+  }
+}

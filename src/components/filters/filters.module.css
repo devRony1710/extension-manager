@@ -1,0 +1,55 @@
+.filtersContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: max-content;
+  gap: 12px;
+}
+
+.filterButton {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  width: max-content;
+  height: 40px;
+  cursor: pointer;
+}
+
+.filterButton:hover {
+  animation: animationButtonHover 0.2s both;
+}
+
+.filterButtonActive {
+  background-color: var(--color-red-500);
+  color: var(--color-neutral-900);
+  font-family: var(--font-noto);
+  font-weight: 700;
+  font-size: var(--font-size-paragraph);
+}
+
+.filterButtonDefault {
+  background-color: var(--color-neutral-800);
+  color: var(--color-neutral-200);
+}
+
+@keyframes animationButtonHover {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .filtersContainer {
+    width: 90%;
+    gap: 12px;
+    margin: 12px auto 0 auto;
+  }
+
+  .filterButton {
+    flex: 1;
+    width: max-content;
+  }
+}

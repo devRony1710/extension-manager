@@ -1,11 +1,10 @@
 import { MainLayout } from "@/layouts";
+import { Home } from "@/pages";
 
 function App() {
   return (
     <MainLayout>
-      <div>
-        <h1>Welcome to React + TypeScript + Vite</h1>
-      </div>
+      <Home />
     </MainLayout>
   );
 }
