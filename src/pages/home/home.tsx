@@ -1,7 +1,9 @@
+import styles from "./home.module.css";
+
 export const Home = () => {
   return (
-    <section>
-      <h1>Home template</h1>
+    <section className={styles["homeMainContainer"]}>
+      <h1 className={styles["homeTitle"]}>Extension List</h1>
     </section>
   );
 };
