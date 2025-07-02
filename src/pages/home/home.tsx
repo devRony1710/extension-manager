@@ -27,6 +27,16 @@ export const Home = () => {
     setFilterSelected(option.value);
   };
 
+  const handleOnToggle = (extensionName: string) => {
+    setExtensionsData((prev) =>
+      prev.map((item) =>
+        item.name === extensionName
+          ? { ...item, isActive: !item.isActive }
+          : item
+      )
+    );
+  };
+
   useEffect(() => {
     if (filterSelected === "all") {
       setExtensionsData(data);
@@ -49,7 +59,10 @@ export const Home = () => {
         <Filters options={FILTERS_OPTIONS} getActiveOption={getActiveOption} />
       </div>
 
-      <ExtensionCardList extensionsData={extensionsData} />
+      <ExtensionCardList
+        extensionsData={extensionsData}
+        handleOnToggle={handleOnToggle}
+      />
     </section>
   );
 };

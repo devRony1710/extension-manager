@@ -1,9 +1,11 @@
 import { FC } from "react";
 import { ExtensionCardListProps } from "./extension-card-list.types";
 import styles from "./extension-card-list.module.css";
+import { ToggleButton } from "../toggle-button/toggle-button";
 
 export const ExtensionCardList: FC<ExtensionCardListProps> = ({
   extensionsData,
+  handleOnToggle,
 }) => {
   return (
     <section className={styles["extensionCardListContainer"]}>
@@ -24,7 +26,14 @@ export const ExtensionCardList: FC<ExtensionCardListProps> = ({
               </span>
             </div>
           </div>
-          <button>Install</button>
+
+          <div>
+            <button>Install</button>
+            <ToggleButton
+              isActive={extension.isActive}
+              handleOnToggle={() => handleOnToggle(extension.name)}
+            />
+          </div>
         </div>
       ))}
     </section>

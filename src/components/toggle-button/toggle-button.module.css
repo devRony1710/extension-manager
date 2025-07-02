@@ -1,0 +1,42 @@
+.toggleButton {
+  width: 48px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: var(--color-neutral-600);
+  border: none;
+  position: relative;
+}
+
+.toggleButtonDot {
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-neutral-0);
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  top: 2px;
+  animation: toggleAnimation 0.2s ease-in-out;
+  transition: left 0.2s ease-in-out;
+}
+
+.toggleActiveButton {
+  background-color: var(--color-red-400);
+}
+
+.toggleActiveButtonDot {
+  left: 24px;
+  transition: left 0.2s ease-in-out;
+}
+
+.toggleActive .toggleButtonDot {
+  left: 24px;
+}
+
+@keyframes toggleAnimation {
+  0% {
+    left: 4px;
+  }
+  100% {
+    left: 24px;
+  }
+}
