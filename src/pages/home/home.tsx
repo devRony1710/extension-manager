@@ -9,6 +9,7 @@ import {
   getExtensionsList,
 } from "@/api/get/get-extensions-list";
 import { useEffect, useState } from "react";
+import { ExtensionCardList } from "@/components/extension-card-list/extension-card-list";
 
 export const Home = () => {
   const [filterSelected, setFilterSelected] = useState<string | null>("all");
@@ -41,21 +42,14 @@ export const Home = () => {
   }, [filterSelected, data]);
 
   return (
-    <section className={styles["homeMainContainer"]}>
-      <h1 className={styles["homeTitle"]}>Extension List</h1>
+    <section className={styles["homeContainer"]}>
+      <div className={styles["homeMainContainer"]}>
+        <h1 className={styles["homeTitle"]}>Extension List</h1>
 
-      <Filters options={FILTERS_OPTIONS} getActiveOption={getActiveOption} />
+        <Filters options={FILTERS_OPTIONS} getActiveOption={getActiveOption} />
+      </div>
 
-      <section className={styles["extensionsContainer"]}>
-        {extensionsData.map((extension) => (
-          <div key={extension.name} className={styles["extensionItem"]}>
-            <img src={extension.logo} alt={extension.name} />
-            <h2>{extension.name}</h2>
-            <p>{extension.description}</p>
-            <button>Install</button>
-          </div>
-        ))}
-      </section>
+      <ExtensionCardList extensionsData={extensionsData} />
     </section>
   );
 };
