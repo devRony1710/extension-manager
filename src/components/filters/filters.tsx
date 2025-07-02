@@ -26,6 +26,7 @@ export const Filters: FC<FiltersProps> = ({ options, getActiveOption }) => {
       <div>
         {optionsCopy.map((option) => (
           <button
+            // aria-pressed ayuda a la accesibilidad a los lectores de pantalla para conocer el estado de la opción
             aria-pressed={option.active}
             key={option.id}
             onClick={() => handleFilterClick(option)}
