@@ -31,7 +31,9 @@ export const Filters: FC<FiltersProps> = ({ options, getActiveOption }) => {
           key={option.id}
           onClick={() => handleFilterClick(option)}
           className={`${styles["filterButton"]} ${
-            option.active ? styles["filterButtonActive"] : ""
+            option.active
+              ? styles["filterButtonActive"]
+              : styles["filterButtonDefault"]
           }`}
         >
           {option.label}
