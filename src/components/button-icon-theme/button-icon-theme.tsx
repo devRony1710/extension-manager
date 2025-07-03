@@ -5,7 +5,6 @@ import { useThemeContext } from "@/hooks/use-theme-context";
 
 export const ButtonIconTheme = () => {
   const { changeTheme, isDarkTheme } = useThemeContext();
-  console.log(isDarkTheme);
   return (
     <button
       type="button"
