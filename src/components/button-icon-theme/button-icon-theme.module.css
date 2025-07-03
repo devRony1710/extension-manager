@@ -4,11 +4,19 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: var(--color-neutral-700);
   border: none;
   border-radius: 8px;
   cursor: pointer;
 }
+
+.button-icon-container-dark {
+  background-color: var(--color-neutral-700);
+}
+
+.button-icon-container-light {
+  background-color: var(--color-neutral-200);
+}
+
 .button-icon-container:hover {
   animation: animationButtonHover 0.2s both;
 }
