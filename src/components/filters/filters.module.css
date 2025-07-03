@@ -27,9 +27,25 @@
   font-size: var(--font-size-paragraph);
 }
 
-.filterButtonDefault {
+.filterButtonDefaultDark {
   background-color: var(--color-neutral-800);
   color: var(--color-neutral-200);
+}
+
+.filterButtonDefaultLight {
+  background-color: var(--color-neutral-0);
+  color: var(--color-neutral-900);
+  border: 1px solid var(--color-neutral-200);
+}
+
+.filterButtonActiveDark {
+  background-color: var(--color-red-500);
+  color: var(--color-neutral-900);
+}
+
+.filterButtonActiveLight {
+  background-color: var(--color-red-500);
+  color: var(--color-neutral-0);
 }
 
 @keyframes animationButtonHover {

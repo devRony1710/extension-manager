@@ -13,9 +13,16 @@
 }
 
 .homeTitle {
-  color: var(--color-neutral-0);
   font-family: var(--font-noto);
   font-size: 42px;
+}
+
+.homeTitleDark {
+  color: var(--color-neutral-0);
+}
+
+.homeTitleLight {
+  color: var(--color-neutral-900);
 }
 
 @media (max-width: 768px) {
