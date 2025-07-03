@@ -1,8 +1,10 @@
 import { FC, useEffect, useState } from "react";
 import { FiltersProps, OptionType } from "./filters.types";
 import styles from "./filters.module.css";
+import { useThemeContext } from "@/hooks/use-theme-context";
 
 export const Filters: FC<FiltersProps> = ({ options, getActiveOption }) => {
+  const { isDarkTheme } = useThemeContext();
   const [optionsCopy, setOptionsCopy] = useState<OptionType[]>(options);
 
   const handleFilterClick = (option: OptionType) => {
@@ -31,9 +33,13 @@ export const Filters: FC<FiltersProps> = ({ options, getActiveOption }) => {
           key={option.id}
           onClick={() => handleFilterClick(option)}
           className={`${styles["filterButton"]} ${
-            option.active
-              ? styles["filterButtonActive"]
-              : styles["filterButtonDefault"]
+            option.active && isDarkTheme
+              ? styles["filterButtonActiveDark"]
+              : option.active && !isDarkTheme
+              ? styles["filterButtonActiveLight"]
+              : isDarkTheme
+              ? styles["filterButtonDefaultDark"]
+              : styles["filterButtonDefaultLight"]
           }`}
         >
           {option.label}
