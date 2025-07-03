@@ -87,3 +87,16 @@
   font-size: var(--font-size-paragraph);
   font-weight: 700;
 }
+
+@media (max-width: 768px) {
+  .extensionCardListContainer {
+    margin: 12px 0 0 0;
+    grid-template-columns: 1fr;
+    overflow: auto;
+    max-height: 70dvh;
+  }
+
+  .extensionCardListContainer::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -15,7 +15,6 @@
   position: absolute;
   left: 4px;
   top: 2px;
-  animation: toggleAnimation 0.2s ease-in-out;
   transition: left 0.2s ease-in-out;
 }
 
