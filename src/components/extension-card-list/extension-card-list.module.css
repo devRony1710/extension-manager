@@ -58,7 +58,7 @@
 .extensionCardDescription {
   font-size: var(--font-size-paragraph);
   font-weight: 500;
-  display: inline-block;
+  display: inline-flex;
   width: 80%;
 }
 
@@ -129,5 +129,8 @@
 
   .extensionCardListContainer::-webkit-scrollbar {
     display: none;
+  }
+  .extensionCardDescription {
+    width: 100%;
   }
 }
