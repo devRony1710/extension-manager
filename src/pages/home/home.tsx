@@ -10,8 +10,10 @@ import {
 } from "@/api/get/get-extensions-list";
 import { useEffect, useState } from "react";
 import { ExtensionCardList } from "@/components/extension-card-list/extension-card-list";
+import { useThemeContext } from "@/hooks/use-theme-context";
 
 export const Home = () => {
+  const { isDarkTheme } = useThemeContext();
   const [filterSelected, setFilterSelected] = useState<string | null>("all");
   const [extensionsData, setExtensionsData] = useState<
     ExtensionListDataResponse[]
@@ -54,7 +56,13 @@ export const Home = () => {
   return (
     <section className={styles["homeContainer"]}>
       <div className={styles["homeMainContainer"]}>
-        <h1 className={styles["homeTitle"]}>Extension List</h1>
+        <h1
+          className={`${styles["homeTitle"]} ${
+            isDarkTheme ? styles["homeTitleDark"] : styles["homeTitleLight"]
+          }`}
+        >
+          Extension List
+        </h1>
 
         <Filters options={FILTERS_OPTIONS} getActiveOption={getActiveOption} />
       </div>

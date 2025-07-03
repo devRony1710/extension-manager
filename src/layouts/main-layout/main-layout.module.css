@@ -1,7 +1,14 @@
 .main-wrapper {
   width: 100dvw;
   height: 100dvh;
+}
+
+.main-wrapper-dark {
   background: var(--dark-gradient);
+}
+
+.main-wrapper-light {
+  background: var(--light-gradient);
 }
 
 .content-wrapper {
@@ -15,7 +22,6 @@
 }
 
 .header-wrapper {
-  background-color: var(--color-neutral-800);
   width: 100%;
   margin-top: 4rem;
   padding: 10px 20px;
@@ -23,4 +29,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.header-wrapper-dark {
+  background-color: var(--color-neutral-800);
+}
+
+.header-wrapper-light {
+  background-color: var(--color-neutral-0);
 }
