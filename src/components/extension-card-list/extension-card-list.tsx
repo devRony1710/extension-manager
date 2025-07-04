@@ -1,14 +1,16 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { ExtensionCardListProps } from "./extension-card-list.types";
 import styles from "./extension-card-list.module.css";
 import { ToggleButton } from "../toggle-button/toggle-button";
 import { useThemeContext } from "@/hooks/use-theme-context";
+import Modal from "../modal/modal";
 
 export const ExtensionCardList: FC<ExtensionCardListProps> = ({
   extensionsData,
   handleOnToggle,
 }) => {
   const { isDarkTheme } = useThemeContext();
+  const [isOpenRemoveModal, setIsOpenRemoveModal] = useState(false);
 
   return (
     <section className={styles["extensionCardListContainer"]}>
@@ -56,6 +58,7 @@ export const ExtensionCardList: FC<ExtensionCardListProps> = ({
                   ? styles["extensionDeleteButtonDark"]
                   : styles["extensionDeleteButtonLight"]
               }`}
+              onClick={() => setIsOpenRemoveModal(true)}
             >
               Remove
             </button>
@@ -66,6 +69,14 @@ export const ExtensionCardList: FC<ExtensionCardListProps> = ({
           </div>
         </div>
       ))}
+
+      {isOpenRemoveModal && (
+        <Modal onClose={() => setIsOpenRemoveModal(false)}>
+          <p>Are you sure you want to remove this extension?</p>
+          <button onClick={() => setIsOpenRemoveModal(false)}>Cancel</button>
+          <button onClick={() => setIsOpenRemoveModal(false)}>Remove</button>
+        </Modal>
+      )}
     </section>
   );
 };
