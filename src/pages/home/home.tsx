@@ -19,7 +19,7 @@ export const Home = () => {
     ExtensionListDataResponse[]
   >([]);
 
-  const { data } = useQuery({
+  const { data, isLoading } = useQuery({
     queryKey: [GET_EXTENSIONS_LIST],
     queryFn: () => getExtensionsList(),
   });
@@ -70,6 +70,7 @@ export const Home = () => {
       <ExtensionCardList
         extensionsData={extensionsData}
         handleOnToggle={handleOnToggle}
+        isLoading={isLoading}
       />
     </section>
   );

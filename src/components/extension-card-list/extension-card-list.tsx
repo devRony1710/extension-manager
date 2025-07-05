@@ -5,13 +5,19 @@ import { ToggleButton } from "../toggle-button/toggle-button";
 import { useThemeContext } from "@/hooks/use-theme-context";
 import Modal from "../modal/modal";
 import { RemoveExtensionConfirmModal } from "../remove-extension-confirm-modal/remove-extension-confirm-modal";
+import { LoadingCardsGrid } from "../loading-cards-grid/loading-cards-grid";
 
 export const ExtensionCardList: FC<ExtensionCardListProps> = ({
   extensionsData,
   handleOnToggle,
+  isLoading,
 }) => {
   const { isDarkTheme } = useThemeContext();
   const [isOpenRemoveModal, setIsOpenRemoveModal] = useState(false);
+
+  if (isLoading) {
+    return <LoadingCardsGrid />;
+  }
 
   return (
     <section className={styles["extensionCardListContainer"]}>
