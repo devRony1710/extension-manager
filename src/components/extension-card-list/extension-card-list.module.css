@@ -120,6 +120,27 @@
   color: var(--color-neutral-900);
 }
 
+.emptyExtensionListContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+}
+
+.emptyExtensionListContainer p {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.emptyExtensionListContainerTextDark {
+  color: var(--color-neutral-200);
+}
+
+.emptyExtensionListContainerTextLight {
+  color: var(--color-neutral-900);
+}
+
 @media (max-width: 768px) {
   .extensionCardListContainer {
     margin: 12px 0 0 0;

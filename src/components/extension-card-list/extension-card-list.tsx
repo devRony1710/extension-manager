@@ -19,6 +19,22 @@ export const ExtensionCardList: FC<ExtensionCardListProps> = ({
     return <LoadingCardsGrid />;
   }
 
+  if (extensionsData?.length === 0) {
+    return (
+      <section className={styles["emptyExtensionListContainer"]}>
+        <p
+          className={`${styles["emptyExtensionListContainerText"]} ${
+            isDarkTheme
+              ? styles["emptyExtensionListContainerTextDark"]
+              : styles["emptyExtensionListContainerTextLight"]
+          }`}
+        >
+          No extensions found
+        </p>
+      </section>
+    );
+  }
+
   return (
     <section className={styles["extensionCardListContainer"]}>
       {extensionsData?.map((extension) => (

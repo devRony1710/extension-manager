@@ -1,4 +1,4 @@
-import ExtensionListData from "@/lib/constants/data.json";
+import data from "@/lib/constants/data.json";
 
 export interface ExtensionListDataResponse {
   logo: string;
@@ -10,5 +10,5 @@ export interface ExtensionListDataResponse {
 export const getExtensionsList = async (): Promise<
   ExtensionListDataResponse[]
 > => {
-  return new Promise((res) => setTimeout(() => res(ExtensionListData), 2000));
+  return new Promise((res) => setTimeout(() => res(data), 2000));
 };
