@@ -105,6 +105,7 @@
   border-radius: 999px;
   font-size: var(--font-size-paragraph);
   font-weight: 700;
+  cursor: pointer;
 }
 
 .extensionDeleteButtonDark {
@@ -132,5 +133,19 @@
   }
   .extensionCardDescription {
     width: 100%;
+  }
+}
+
+.extensionDeleteButton:hover {
+  animation: animationButtonHover 0.3s both;
+  background-color: var(--color-red-700);
+}
+
+@keyframes animationButtonHover {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
   }
 }
