@@ -4,6 +4,7 @@ import styles from "./extension-card-list.module.css";
 import { ToggleButton } from "../toggle-button/toggle-button";
 import { useThemeContext } from "@/hooks/use-theme-context";
 import Modal from "../modal/modal";
+import { RemoveExtensionConfirmModal } from "../remove-extension-confirm-modal/remove-extension-confirm-modal";
 
 export const ExtensionCardList: FC<ExtensionCardListProps> = ({
   extensionsData,
@@ -72,9 +73,9 @@ export const ExtensionCardList: FC<ExtensionCardListProps> = ({
 
       {isOpenRemoveModal && (
         <Modal onClose={() => setIsOpenRemoveModal(false)}>
-          <p>Are you sure you want to remove this extension?</p>
-          <button onClick={() => setIsOpenRemoveModal(false)}>Cancel</button>
-          <button onClick={() => setIsOpenRemoveModal(false)}>Remove</button>
+          <RemoveExtensionConfirmModal
+            onClose={() => setIsOpenRemoveModal(false)}
+          />
         </Modal>
       )}
     </section>

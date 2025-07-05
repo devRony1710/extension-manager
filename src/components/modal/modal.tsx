@@ -1,12 +1,16 @@
 import { FC } from "react";
 import { ModalProps } from "./modal.types";
 import { createPortal } from "react-dom";
+import CloseIcon from "@mui/icons-material/Close";
+import styles from "./modal.module.css";
 
 export const ModalUI: FC<ModalProps> = ({ onClose, children }) => {
   return (
     <div style={backdropStyle}>
       <div style={modalStyle}>
-        <button onClick={onClose}></button>
+        <button className={styles["buttonClose"]} onClick={onClose}>
+          <CloseIcon color="primary" />
+        </button>
         {children}
       </div>
     </div>
@@ -35,12 +39,13 @@ const backdropStyle: React.CSSProperties = {
 };
 
 const modalStyle: React.CSSProperties = {
-  background: "white",
+  background: "var(--dark-gradient)",
   padding: "20px",
-  borderRadius: "8px",
+  borderRadius: "12px",
   width: "80%",
   maxWidth: "600px",
   height: "400px",
+  position: "relative",
 };
 
 export default Modal;

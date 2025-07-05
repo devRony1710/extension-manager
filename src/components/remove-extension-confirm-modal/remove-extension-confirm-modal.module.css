@@ -1,0 +1,59 @@
+.removeExtensionConfirmModalContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+.removeExtensionConfirmModalContainer p {
+  text-align: center;
+  font-size: 24px;
+  color: var(--color-neutral-200);
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 16px;
+  width: 80%;
+}
+
+.buttonCancel {
+  background-color: transparent;
+  border: 1px solid var(--color-neutral-300);
+  cursor: pointer;
+  color: var(--color-neutral-200);
+  flex: 1;
+  border-radius: 12px;
+  height: 36px;
+}
+
+.buttonCancel:hover {
+  animation: animationButtonHover 0.3s both;
+}
+
+.buttonRemove:hover {
+  animation: animationButtonHover 0.3s both;
+}
+
+.buttonRemove {
+  background-color: #ff0000;
+  color: var(--color-neutral-200);
+  border: 1px solid var(--color-neutral-300);
+  cursor: pointer;
+  flex: 1;
+  width: 100%;
+  border-radius: 12px;
+  height: 36px;
+}
+
+@keyframes animationButtonHover {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
