@@ -1,0 +1,24 @@
+.buttonClose {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  cursor: pointer;
+}
+
+.buttonClose:hover {
+  animation: animationButtonHover 0.3s both;
+}
+
+@keyframes animationButtonHover {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}

@@ -1,12 +1,11 @@
-import "./App.css";
-import { Button, Input } from "@/components";
+import { MainLayout } from "@/layouts";
+import { Home } from "@/pages";
 
 function App() {
   return (
-    <>
-      <Button />
-      <Input />
-    </>
+    <MainLayout>
+      <Home />
+    </MainLayout>
   );
 }
 
