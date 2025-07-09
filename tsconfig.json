@@ -4,9 +4,9 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["node"],
+    "types": ["node", "vite", "vitest"],
     "moduleResolution": "node",
-    "target": "ESNext",
+    "target": "es2024",
     "module": "ESNext",
     "jsx": "react-jsx",
     "resolveJsonModule": true,
