@@ -20,7 +20,17 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
-    "composite": true
+    "composite": true,
+
+    "types": [
+      "node",
+      "vitest",
+      "vite"
+      // "vitest/globals",
+      // "vite/client"
+    ],
+
+    "esModuleInterop": true
   },
   "include": ["vite.config.ts"],
   "extends": "./tsconfig.json"
