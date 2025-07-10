@@ -5,7 +5,7 @@
       "@/*": ["src/*"]
     },
     "types": ["node", "vite", "vitest"],
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "target": "es2024",
     "module": "ESNext",
     "jsx": "react-jsx",

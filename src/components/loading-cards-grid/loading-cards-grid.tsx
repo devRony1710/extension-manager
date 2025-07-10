@@ -12,8 +12,8 @@ export const LoadingCardsGrid = () => {
           <Skeleton
             sx={{ backgroundColor: "hsl(225, 23%, 24%)", opacity: 0.2 }}
             variant="rounded"
-            width={500}
-            height={200}
+            width={"100%"}
+            height={"200px"}
           />
         </div>
       ))}
