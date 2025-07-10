@@ -16,7 +16,11 @@ export const ButtonIconTheme = () => {
       }`}
       onClick={changeTheme}
     >
-      <img src={isDarkTheme ? SunIcon : MoonIcon} alt="Toggle theme" />
+      <img
+        data-testid="button-icon-theme-img"
+        src={isDarkTheme ? SunIcon : MoonIcon}
+        alt={isDarkTheme ? "Switch to light theme" : "Switch to dark theme"}
+      />
     </button>
   );
 };

@@ -36,7 +36,10 @@ export const ExtensionCardList: FC<ExtensionCardListProps> = ({
   }
 
   return (
-    <section className={styles["extensionCardListContainer"]}>
+    <section
+      data-testid={`extension-card-list`}
+      className={styles["extensionCardListContainer"]}
+    >
       {extensionsData?.map((extension) => (
         <div
           key={extension.name}
