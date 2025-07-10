@@ -5,7 +5,7 @@ import styles from "./button-icon-theme.module.css";
 import { useThemeContext } from "@/hooks/use-theme-context";
 export const ButtonIconTheme = () => {
     const { changeTheme, isDarkTheme } = useThemeContext();
-    return (_jsx("button", { "data-testid": "button-icon-theme", type: "button", className: `${styles["button-icon-container"]} ${isDarkTheme
+    return (_jsx("button", { "data-testid": `button-icon-theme`, type: "button", className: `${styles["button-icon-container"]} ${isDarkTheme
             ? styles["button-icon-container-dark"]
             : styles["button-icon-container-light"]}`, onClick: changeTheme, children: _jsx("img", { src: isDarkTheme ? SunIcon : MoonIcon, alt: "Toggle theme" }) }));
 };

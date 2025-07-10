@@ -7,7 +7,7 @@ export const ButtonIconTheme = () => {
   const { changeTheme, isDarkTheme } = useThemeContext();
   return (
     <button
-      data-testid="button-icon-theme"
+      data-testid={`button-icon-theme`}
       type="button"
       className={`${styles["button-icon-container"]} ${
         isDarkTheme
