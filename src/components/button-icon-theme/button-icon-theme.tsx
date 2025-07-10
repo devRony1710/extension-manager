@@ -7,7 +7,7 @@ export const ButtonIconTheme = () => {
   const { changeTheme, isDarkTheme } = useThemeContext();
   return (
     <button
-      data-testid="button-icon-theme"
+      data-testid={`button-icon-theme`}
       type="button"
       className={`${styles["button-icon-container"]} ${
         isDarkTheme
@@ -16,7 +16,11 @@ export const ButtonIconTheme = () => {
       }`}
       onClick={changeTheme}
     >
-      <img src={isDarkTheme ? SunIcon : MoonIcon} alt="Toggle theme" />
+      <img
+        data-testid="button-icon-theme-img"
+        src={isDarkTheme ? SunIcon : MoonIcon}
+        alt={isDarkTheme ? "Switch to light theme" : "Switch to dark theme"}
+      />
     </button>
   );
 };

@@ -3,8 +3,11 @@ import styles from "./loading-cards-grid.module.css";
 
 export const LoadingCardsGrid = () => {
   return (
-    <section className={styles["loadingCardsGridContainer"]}>
-      {Array.from({ length: 9 }).map((_, index) => (
+    <section
+      data-testid="loading-cards-grid"
+      className={styles["loadingCardsGridContainer"]}
+    >
+      {Array.from({ length: 6 }).map((_, index) => (
         <div key={index}>
           <Skeleton
             sx={{ backgroundColor: "hsl(225, 23%, 24%)", opacity: 0.2 }}
